@@ -126,6 +126,9 @@ function initServicesTabs() {
 // SMOOTH SCROLL FOR IN-PAGE ANCHORS
 // --------------------------------------------
 function initSmoothScroll() {
+  const isDesktop = () => window.innerWidth >= 768;  
+  if (!isDesktop()) return;
+  
   const anchors = document.querySelectorAll('a[href^="#"]');
   if (!anchors.length) return;
 
