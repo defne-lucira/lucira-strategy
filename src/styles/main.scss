@@ -1280,6 +1280,133 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================
+   CLIENT IMPACT / TESTIMONIALS
+   ============================================ */
+
+
+
+
+.testimonials-grid {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr; // stacked (one on top of the other)
+  //gap: clamp(2.25rem, 4vw, 4rem);
+  padding-top: clamp(0.75rem, 1.2vw, 1.25rem);
+  overflow: visible;
+
+}
+
+
+.t-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding-bottom: 3.35rem;
+
+  transform-origin: center;
+  transition: transform .3s ease;
+}
+
+
+/* keyboard accessibility */
+.t-item:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 8px;
+  border-radius: 10px;
+}
+
+.t-quote {
+  padding-left: 5%;
+  padding-right: 5%;
+
+  p {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: var(--dark);
+    font-size: clamp(1.05rem, 1.15vw, 1.25rem);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.9;
+    letter-spacing: 0.1px;
+
+    padding-left: 1.25rem;
+    background-image: linear-gradient(var(--gold), var(--gold));
+    background-size: 5px 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.14));
+
+    transition: all .3s ease;
+
+    &:hover {
+      color: var(--lapis-lazuli);
+      transform: scale(1.05);
+
+      background-image: linear-gradient(var(--space-cadet), var(--light-blue));
+      background-size: 5px 100%;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    } 
+  }  
+}
+
+.t-name {
+  font-family: "minerva-modern", serif !important;
+  font-weight: 700;
+  font-size:2rem;
+  color: var(--lapis-lazuli);
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+  }
+}
+
+.t-meta {
+  font-size: 0.95rem;
+  color: var(--light-black);
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+  }
+}
+
+
+
+@media (max-width: 560px) {
+  .t-item::before {
+    left: 0;
+    top: -0.55rem;
+  }
+
+  .t-item {
+    padding-bottom: 3.7rem;
+  }
+
+  .t-quote {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .t-quote p {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .t-meta {
+  font-size: 0.8rem;
+  }
+}
+
+/* ============================================
    CONTACT SECTION
    ============================================ */
 
