@@ -505,13 +505,16 @@ h1, h2, h3, h4 {
 /* Hero Mobile Styles */
 @media (max-width: 768px) {
   .hero .hero-content {
+     
+     padding: 1rem;
+     
     h1 {
-      font-size: 2.4rem;
+      font-size: 1.5rem;
       white-space: normal;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .hero-buttons {
