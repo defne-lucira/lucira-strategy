@@ -315,7 +315,10 @@ h1, h2, h3, h4 {
   }
 }
 @media (max-width: 768px) {
-  .nav-links {
+   .navbar {
+      padding: 0;
+   }
+   .nav-links {
     display: none;
   }
 
