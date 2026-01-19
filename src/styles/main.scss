@@ -94,6 +94,23 @@ h1, h2, h3, h4 {
   padding-top: 0;
 }
 
+/* -----------------------------
+   MOBILE: disable snap scrolling
+-------------------------------- */
+@media (max-width: 768px) {
+  .snap-container {
+    scroll-snap-type: none;
+    overflow-y: auto;      // important: restore normal scroll
+    height: auto;          // let document flow naturally
+  }
+
+  .snap-section,
+  .footer-section {
+    scroll-snap-align: none;
+    min-height: auto;      // prevents forced full-screen sections
+  }
+}
+
 /* ============================================
    SCROLL ANIMATIONS - Core Utilities
    ============================================ */
