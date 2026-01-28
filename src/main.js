@@ -486,7 +486,7 @@ ready(() => {
   initContactForm();
   //initParallaxHero();
   //initNavbarScrollEffect();
-  initCursorTrail();
+  // initCursorTrail();
   //initLazyImages();
   initMobileNav();
   //ready();
